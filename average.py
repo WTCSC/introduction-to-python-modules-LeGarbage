@@ -19,4 +19,6 @@ sum = 0
 for line in lines:
     sum += text_utils.count_words(line)
 average = sum / len(lines)
+if average - int(average) == 0:
+    average = int(average)
 print(f"Average words per line: {average}")
