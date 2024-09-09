@@ -2,7 +2,7 @@ def count_chars(text):
     return len(text)
 
 def count_words(text):
-    return len(text.split())
+    return text.count(" ")
 
 def count_sentences(text):
-    return len(text.split("."))
+    return text.count(".") + text.count("?") + text.count("!")
