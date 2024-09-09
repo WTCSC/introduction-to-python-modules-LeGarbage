@@ -13,12 +13,13 @@ format:
 
 import text_utils
 
-file = open("sample.txt", "r")
-lines = file.readlines()
+file = open("sample.txt", "r") # Opens the file
+lines = file.readlines() # Splits the text into individual lines
+
 sum = 0
-for line in lines:
+for line in lines: # Counts the total number of words in the file
     sum += text_utils.count_words(line)
-average = sum / len(lines)
-if average - int(average) == 0:
+average = sum / len(lines) # Averages the number of words per line
+if average - int(average) == 0: # Makes the result an int if it is a whole number
     average = int(average)
 print(f"Average words per line: {average}")
